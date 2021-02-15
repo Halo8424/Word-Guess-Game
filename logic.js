@@ -20,6 +20,20 @@ function startGame(){
     // Capture each letter of the selectedWord
     lettersInSelectedWord = selectedWord.split('');
     console.log(`Letters of selected word: ${lettersInSelectedWord}`);
+    // Setting the number of blanks for the selected word
+    numBlanks = lettersInSelectedWord.length;
+    console.log(`Number of blanks for selected words: ${numBlanks}`);
+
+    // Clearing the blanks and correct letters array, and the wrong Guesses Array for a fresh game reset
+    blanksAndCorrectLetters = [];
+    wrongGuesses = [];
+
+    //Looping over numBlanks variable to push blanks to blanksAndCorrectLetters array
+    for(let i = 0; i < numBlanks; i++){
+        blanksAndCorrectLetters.push("_");
+    }
+    
+    console.log(blanksAndCorrectLetters);
 };
 
 startGame();
