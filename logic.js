@@ -32,8 +32,10 @@ function startGame(){
     for(let i = 0; i < numBlanks; i++){
         blanksAndCorrectLetters.push("_");
     }
-    
     console.log(blanksAndCorrectLetters);
+
+    // Display inital guesses left, new blanks for current selected word, and clearing wrong guesses
+    document.getElementById("word").innerHTML = blanksAndCorrectLetters.join(" ");
 };
 
 startGame();
