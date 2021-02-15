@@ -16,7 +16,10 @@ let wrongGuesses = [];
 function startGame(){
     remainingGuesses = 10;
     selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
-    console.log(selectedWord);
+    console.log(`Word Chosen From Array: ${selectedWord}`);
+    // Capture each letter of the selectedWord
+    lettersInSelectedWord = selectedWord.split('');
+    console.log(`Letters of selected word: ${lettersInSelectedWord}`);
 };
 
 startGame();
