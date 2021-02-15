@@ -12,3 +12,11 @@ let numBlanks = 0;
 let blanksAndCorrectLetters = [];
 let wrongGuesses = [];
 
+// functions that operate the game 
+function startGame(){
+    remainingGuesses = 10;
+    selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
+    console.log(selectedWord);
+};
+
+startGame();
