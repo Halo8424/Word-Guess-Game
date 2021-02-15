@@ -37,7 +37,7 @@ function startGame(){
     // Display inital guesses left, new blanks for current selected word, and clearing wrong guesses
     document.getElementById("word").innerHTML = blanksAndCorrectLetters.join(" ");
     document.getElementById("guess-counter").innerHTML = remainingGuesses;
-    
+    document.getElementById("guessed-letters").innerHTML = wrongGuesses.join(" ");
 };
 
 startGame();
