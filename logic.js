@@ -39,5 +39,42 @@ function startGame(){
     document.getElementById("guess-counter").innerHTML = remainingGuesses;
     document.getElementById("guessed-letters").innerHTML = wrongGuesses.join(" ");
 };
+// function to check letter in selectedWord
+function checkLetters(letter){
+  // initializing a false boolean value to "letterInWord" variable, we'll update if a letter is found in this word. 
+  let letterInWord = false;
+  
+  //  Loop over the selected word and check if the letter is anywhere within the selected word. 
+  for(let i = 0; i < numBlanks; i++){
+        if(selectedWord[i] === letter){
+            // If a letter is found we update the "lettersInword" variable
+           lettersInWord = true; 
+        }
+  }
+  //  If a letter is within the selected word, Loop over the word again and update the blanks at every instance of that letter.  
+  if(lettersInWord){
+      for(let j = 0; j < numBlanks; j++){
+          if(selectedWord[j] === letter){
+              blanksAndCorrectLetters[j] = letter;
+          }
+      }
+      console.log(blanksAndCorrectLetters);
+  }
+};
+
+
 
 startGame();
+
+// Then initiate the function for capturing key clicks.
+document.onkeyup = function(event) {
+    // Check if the key pressed is a letter.
+    if (event.keyCode >= 65 && event.keyCode <= 90) {
+      // Converts all key clicks to lowercase letters.
+      var letterGuessed = event.key.toLowerCase();
+      // Runs the code to check for correctness.
+      checkLetters(letterGuessed);
+      // Runs the code after each round is done.
+      //roundComplete();
+    }
+  };
