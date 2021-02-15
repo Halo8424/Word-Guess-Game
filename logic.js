@@ -48,18 +48,24 @@ function checkLetters(letter){
   for(let i = 0; i < numBlanks; i++){
         if(selectedWord[i] === letter){
             // If a letter is found we update the "lettersInword" variable
-           lettersInWord = true; 
+           letterInWord = true; 
         }
   }
   //  If a letter is within the selected word, Loop over the word again and update the blanks at every instance of that letter.  
-  if(lettersInWord){
+  if(letterInWord){
       for(let j = 0; j < numBlanks; j++){
           if(selectedWord[j] === letter){
               blanksAndCorrectLetters[j] = letter;
           }
       }
       console.log(blanksAndCorrectLetters);
-  }
+  } 
+    //   If letter does not exsit push letter into wrongGuesses array and update the remaining guesses 
+    else{
+        wrongGuesses.push(letter);
+        remainingGuesses--;
+        console.log(`Remaining guesses: ${remainingGuesses} and wrongGuesses array: [${wrongGuesses}]`);
+    }
 };
 
 
