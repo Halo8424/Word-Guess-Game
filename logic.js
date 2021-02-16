@@ -68,7 +68,7 @@ function checkLetters(letter){
     }
 };
 
-
+// Cliffhanger: Left off needeing to start the functions that deals with round completion. 
 
 startGame();
 
