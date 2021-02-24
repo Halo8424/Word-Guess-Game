@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="stylesheet" href="style.css" />
     <title>Word Guess</title>
   </head>
@@ -14,36 +14,34 @@
       <h2>Guess The Simpson Character</h2>
       <p>Click any letter to begin</p>
     </div>
-    
+
     <!-- Full container  -->
     <div class="container">
-        <!-- Scoring Section  -->
-        <div class="score-container">
-            <div >
-              <strong>Wins:</strong>
-              <span id="wins">0</span>
-            </div>
-            <div id="loses">Loses:</div>
+      <!-- Scoring Section  -->
+      <div class="score-container">
+        <div>
+          <strong>Wins:</strong>
+          <span id="wins">0</span>
         </div>
-        <!-- Main Game Section -->
-        <div class="main-game-section">
-            <div class="img-container">
-                <div id="img">
-
-                </div>
-            </div>
-            <div class="word-container">
-                <div id="word"></div>
-                <div id="guess-counter">Guesses remaining: </div>
-            </div>
-            <!-- **Concider reNaming this variable found on line 81 logic.js -->
-            <div class="guessed-letters-container">
-                <div id="guessed-letters">
-
-                </div>
-            </div>
+        <div>
+          <strong>Loses:</strong>
+          <span id="loses">0</span>
         </div>
-
+      </div>
+      <!-- Main Game Section -->
+      <div class="main-game-section">
+        <div class="img-container">
+          <div id="img"></div>
+        </div>
+        <div class="word-container">
+          <div id="word"></div>
+          <div id="guess-counter">Guesses remaining:</div>
+        </div>
+        <!-- **Concider reNaming this variable found on line 81 logic.js -->
+        <div class="guessed-letters-container">
+          <div id="guessed-letters"></div>
+        </div>
+      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
