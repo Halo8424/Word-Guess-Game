@@ -68,7 +68,17 @@ function checkLetters(letter){
     }
 };
 
-// Cliffhanger: Left off needeing to start the functions that deals with round completion. 
+//  Function to deal with the ending of a round. 
+    function endOfRound(){
+        // Feed back on the status of the game
+        console.log(`Wins: ${wins} Losses: ${losses} Remaining Guesses: ${remainingGuesses}`);
+
+        // Update html on guesses reamining 
+        document.getElementById("guess-counter").innerHTML = remainingGuesses;
+        // Update html with corrct letters on screen
+        document.getElementById("word").innerHTML = blanksAndCorrectLetters.join(" ");
+    };
+
 
 startGame();
 
