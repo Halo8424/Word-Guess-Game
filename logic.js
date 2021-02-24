@@ -77,6 +77,8 @@ function checkLetters(letter){
         document.getElementById("guess-counter").innerHTML = remainingGuesses;
         // Update html with corrct letters on screen
         document.getElementById("word").innerHTML = blanksAndCorrectLetters.join(" ");
+        // Display the wrong guesses letters to the user.
+        document.getElementById("guessed-letters").innerHTML = wrongGuesses.join(" ");
     };
 
 
