@@ -108,6 +108,6 @@ document.onkeyup = function(event) {
       // Runs the code to check for correctness.
       checkLetters(letterGuessed);
       // Runs the code after each round is done.
-      //roundComplete();
+      endOfRound();
     }
   };
