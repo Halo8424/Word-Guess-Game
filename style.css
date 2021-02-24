@@ -22,3 +22,14 @@
   justify-content: space-around;
   padding: 15px;
 }
+ strong{
+     font-size: 25px;
+ }
+.scoreCounters{
+    font-size: 20px;
+}
+
+.main-game-section{
+    display: flex;
+    justify-content: center;
+}
