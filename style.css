@@ -22,14 +22,34 @@
   justify-content: space-around;
   padding: 15px;
 }
- strong{
-     font-size: 25px;
- }
-.scoreCounters{
-    font-size: 20px;
+strong {
+  font-size: 25px;
+}
+.scoreCounters {
+  font-size: 20px;
 }
 
-.main-game-section{
-    display: flex;
-    justify-content: center;
+.word-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+.remaining-guesses-container{
+    height: 60px;
+    text-align: center;
+    padding: 10px;
+  
+}
+
+.guessed-letters-container{
+    border-bottom: 1px dotted black;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 2px;
+    font-size: 25px;
+}
+
+p{
+    text-align: center;
 }

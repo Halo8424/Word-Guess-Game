@@ -30,19 +30,21 @@
       </div>
       <!-- Main Game Section -->
       <div class="main-game-section">
-        <div class="img-container">
-          <div id="img"></div>
-        </div>
         <div class="word-container">
           <div id="word"></div>
-          <div id="guess-counter">Guesses remaining:</div>
-        </div>
+          </div>
+          <div class=remaining-guesses-container>
+            <strong>Remaining Guesses:</strong>
+            <span class="scoreCounters" id="guess-counter"></span>
+          </div>
+        
         <!-- **Concider reNaming this variable found on line 81 logic.js -->
         <div class="guessed-letters-container">
           <div id="guessed-letters"></div>
         </div>
       </div>
     </div>
+    <p id="last-tag">Already Guessed Letters</p>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
