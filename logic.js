@@ -1,7 +1,28 @@
 // Global variables all functions can access
 
 // List of words to be guessed
-let wordList = ["red","orange","purple","black"];
+let wordList = [
+    "homer",
+    "bart",
+    "marge",
+    "lisa",
+    "apu",
+    "milhouse",
+    "moe",
+    "nelson",
+    "barney",
+    "skinner",
+    "willie",
+    "allison",
+    "krusty",
+    "ralph",
+    "abraham",
+    "herbert",
+    "patty",
+    "lenny",
+    "martin",
+    "maggie"
+];
 
 let wins = 0;
 let losses = 0;
