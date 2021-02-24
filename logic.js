@@ -43,6 +43,7 @@ function startGame(){
 function checkLetters(letter){
   // initializing a false boolean value to "letterInWord" variable, we'll update if a letter is found in this word. 
   let letterInWord = false;
+ 
   
   //  Loop over the selected word and check if the letter is anywhere within the selected word. 
   for(let i = 0; i < numBlanks; i++){
@@ -59,13 +60,15 @@ function checkLetters(letter){
           }
       }
       console.log(blanksAndCorrectLetters);
-  } 
+  }
+    
     //   If letter does not exsit push letter into wrongGuesses array and update the remaining guesses 
     else{
         wrongGuesses.push(letter);
         remainingGuesses--;
         console.log(`Remaining guesses: ${remainingGuesses} and wrongGuesses array: [${wrongGuesses}]`);
     }
+
 };
 
 //  Function to deal with the ending of a round. 
@@ -108,7 +111,7 @@ function checkLetters(letter){
         }
     };
 
-
+// Initial Start Of The Game
 startGame();
 
 // Then initiate the function for capturing key clicks.
@@ -116,7 +119,7 @@ document.onkeyup = function(event) {
     // Check if the key pressed is a letter.
     if (event.keyCode >= 65 && event.keyCode <= 90) {
       // Converts all key clicks to lowercase letters.
-      var letterGuessed = event.key.toLowerCase();
+      let letterGuessed = event.key.toLowerCase();
       // Runs the code to check for correctness.
       checkLetters(letterGuessed);
       // Runs the code after each round is done.
