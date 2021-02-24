@@ -92,7 +92,19 @@ function checkLetters(letter){
             // ReStart the game
             startGame();
 
-        
+        }else{
+            // Check to see if remaining guess have reach zero
+            if(remainingGuesses === 0){
+                // update losses counter and update losses on html 
+                losses++;
+                document.getElementById("loses").innerHTML = losses;
+
+                // alert the user they lost the round.
+                alert("Sorry You Lost This Round");
+
+                // restart the game.
+                startGame();
+            }
         }
     };
 
