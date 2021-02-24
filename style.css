@@ -10,9 +10,14 @@
   background-color: rgb(234, 236, 239);
 }
 
-.intro-container h1{
-    padding: 20px;
+.intro-container h1 {
+  padding: 15px;
 }
-.intro-container p{
-    padding: 5px;
+.intro-container p {
+  padding: 8px;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-around;
 }
