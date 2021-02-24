@@ -79,6 +79,21 @@ function checkLetters(letter){
         document.getElementById("word").innerHTML = blanksAndCorrectLetters.join(" ");
         // Display the wrong guesses letters to the user.
         document.getElementById("guessed-letters").innerHTML = wrongGuesses.join(" ");
+
+        // Conditional Checking User Guessed The Word. 
+        if(lettersInSelectedWord.toString() === blanksAndCorrectLetters.toString()){
+            // update Win counter
+            wins++;
+            // update html win counter. 
+            document.getElementById("wins").innerHTML = wins;
+            //  alert user they won the round
+            alert("You Have Won This Round");
+
+            // ReStart the game
+            startGame();
+
+        
+        }
     };
 
 
