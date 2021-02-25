@@ -6,22 +6,24 @@
 .header_container {
   width: 100%;
   height: 20vh;
+  margin-bottom: 1em;
   text-align: center;
   background-color: rgb(234, 236, 239);
 }
-.header_title{
-    height: 60px;
+.header_title {
+  height: 60px;
 }
 .header_title h1 {
   padding: 15px;
 }
-.header_title_info h2{
-    padding-bottom: 5px;
+.header_title_info h2 {
+  padding-bottom: 5px;
 }
 
 .score-container {
+  height: 2em;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 15px;
 }
 strong {
@@ -37,23 +39,22 @@ strong {
   justify-content: center;
   font-size: 35px;
 }
-.remaining-guesses-container{
-    height: 60px;
-    text-align: center;
-    padding: 10px;
-  
+.remaining-guesses-container {
+  height: 60px;
+  text-align: center;
+  padding: 10px;
 }
 
-.guessed-letters-container{
-    border-bottom: 1px dotted black;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 2px;
-    font-size: 25px;
+.guessed-letters-container {
+  border-bottom: 1px dotted black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 2px;
+  font-size: 25px;
 }
 
-p{
-    text-align: center;
+p {
+  text-align: center;
 }
 
- /* Media  */
+/* Media  */
