@@ -33,7 +33,7 @@ strong {
   font-size: 20px;
 }
 
-.word-container {
+.word_container {
   padding: 20px;
   margin-bottom: 1em;
   display: flex;
@@ -50,10 +50,11 @@ strong {
   border-bottom: 1px dotted black;
   padding: 10px;
   margin: 5px;
-  border-radius: 2px;
   font-size: 25px;
 }
-
+#guessed-letters{
+    height: 1em;
+}
 p {
   text-align: center;
 }
