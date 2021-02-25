@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="style.css" />
     <title>Word Guess</title>
   </head>
   <body>
-    <div class="intro-container">
-      <h1>Word Guess</h1>
-      <h2>Guess The Simpson Character</h2>
+    
+    <div class="header_container">
+      <div class="header_title">
+        <h1>Word Guess</h1>
+      </div>
+      <div class="header_title_info">
+        <h2>Guess The Simpson Character</h2>
       <p>Click any letter to begin</p>
-    </div>
+      </div>
+    </div>  
+    
 
     <!-- Full container  -->
     <div class="container">
@@ -23,28 +28,37 @@
           <strong>Wins:</strong>
           <span class="scoreCounters" id="wins">0</span>
         </div>
+
         <div>
           <strong>Loses:</strong>
           <span class="scoreCounters" id="loses">0</span>
         </div>
+
       </div>
+
       <!-- Main Game Section -->
       <div class="main-game-section">
+
         <div class="word-container">
           <div id="word"></div>
-          </div>
-          <div class=remaining-guesses-container>
-            <strong>Remaining Guesses:</strong>
-            <span class="scoreCounters" id="guess-counter"></span>
-          </div>
-        
+        </div>
+
+        <div class="remaining-guesses-container">
+          <strong>Remaining Guesses:</strong>
+          <span class="scoreCounters" id="guess-counter"></span>
+        </div>
+
         <!-- **Concider reNaming this variable found on line 81 logic.js -->
         <div class="guessed-letters-container">
           <div id="guessed-letters"></div>
         </div>
+
       </div>
+
     </div>
     <p id="last-tag">Already Guessed Letters</p>
+
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
