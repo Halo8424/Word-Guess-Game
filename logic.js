@@ -1,6 +1,5 @@
-// Global variables all functions can access
 
-// List of words to be guessed
+// List of Simpson Characters
 let wordList = [
   "homer",
   "bart",
@@ -95,7 +94,6 @@ function checkLetters(userLetterInput) {
   }
 }
 
-//  Function to deal with the ending of a round.
 function endOfRound() {
   resetsUserDisplay();
 
@@ -125,13 +123,9 @@ startGame();
 
 // Then initiate the function for capturing key clicks.
 document.onkeyup = function (event) {
-  // Check if the key pressed is a userLetterInput.
   if (event.keyCode >= 65 && event.keyCode <= 90) {
-    // Converts all key clicks to lowercase letters.
-    let letterGuessed = event.key.toLowerCase();
-    // Runs the code to check for correctness.
-    checkLetters(letterGuessed);
-    // Runs the code after each round is done.
+    let userInput = event.key.toLowerCase();
+    checkLetters(userInput);
     endOfRound();
   }
 };
