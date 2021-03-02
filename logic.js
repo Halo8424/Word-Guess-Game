@@ -44,12 +44,8 @@ function startGame(){
 function selectsRandomWord(){
     randomSelectedWord = wordList[Math.floor(Math.random() * wordList.length)];
     console.log(`Word Chosen From Array: ${randomSelectedWord}`);
-    // Capture each letter of the randomSelectedWord
     lettersOfRandomSelectedWordsArray = randomSelectedWord.split('');
-    console.log(`Letters of selected word: ${lettersOfRandomSelectedWordsArray}`);
-    // Setting the number of blanks for the selected word
     blanksPlaceHolderCounter = lettersOfRandomSelectedWordsArray.length;
-    console.log(`Number of blanks for selected words: ${blanksPlaceHolderCounter}`);
 };
 
 function resetGameVariables(){
