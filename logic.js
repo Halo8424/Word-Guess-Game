@@ -68,37 +68,29 @@ function resetsUserDisplay(){
 
 
 
-// function to check letter in randomSelectedWord
-function checkLetters(letter){
-  // initializing a false boolean value to "letterInWord" variable, we'll update if a letter is found in this word. 
+
+function checkLetters(userLetterInput){
   let letterInWord = false;
- 
-  
-  //  Loop over the selected word and check if the letter is anywhere within the selected word. 
-  for(let i = 0; i < blanksPlaceHolderCounter; i++){
-        if(randomSelectedWord[i] === letter){
-            // If a letter is found we update the "lettersInword" variable
+    for(let i = 0; i < blanksPlaceHolderCounter; i++){
+        if(randomSelectedWord[i] === userLetterInput){
            letterInWord = true; 
         }
   }
-  //  If a letter is within the selected word, Loop over the word again and update the blanks at every instance of that letter.  
+    
   if(letterInWord){
       for(let j = 0; j < blanksPlaceHolderCounter; j++){
-          if(randomSelectedWord[j] === letter){
-              blanksAndCorrectLettersArray[j] = letter;
+          if(randomSelectedWord[j] === userLetterInput){
+              blanksAndCorrectLettersArray[j] = userLetterInput;
           }
       }
-      console.log(blanksAndCorrectLettersArray);
   }
-    
-    //   If letter does not exsit push letter into incorrectGuessedLettersArray array and update the remaining guesses 
     else{
-        incorrectGuessedLettersArray.push(letter);
+        incorrectGuessedLettersArray.push(userLetterInput);
         userRemainingGuessCounter--;
         console.log(`Remaining guesses: ${userRemainingGuessCounter} and incorrectGuessedLettersArray array: [${incorrectGuessedLettersArray}]`);
     }
-
 };
+
 
 //  Function to deal with the ending of a round. 
     function endOfRound(){
@@ -140,7 +132,7 @@ startGame();
 
 // Then initiate the function for capturing key clicks.
 document.onkeyup = function(event) {
-    // Check if the key pressed is a letter.
+    // Check if the key pressed is a userLetterInput.
     if (event.keyCode >= 65 && event.keyCode <= 90) {
       // Converts all key clicks to lowercase letters.
       let letterGuessed = event.key.toLowerCase();
