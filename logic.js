@@ -50,21 +50,17 @@ function selectsRandomWord(){
 
 function resetGameVariables(){
     userRemainingGuessCounter = 10;
-     // Clearing the blanks and correct letters array, and the wrong Guesses Array for a fresh game reset
     blanksAndCorrectLettersArray = [];
     incorrectGuessedLettersArray = [];
 };
 
 function setNewBlanks(){
-    //Looping over blanksPlaceHolderCounter variable to push blanks to blanksAndCorrectLettersArray array
     for(let i = 0; i < blanksPlaceHolderCounter; i++){
         blanksAndCorrectLettersArray.push("_");
     }
-    console.log(blanksAndCorrectLettersArray);
 };
 
 function resetsUserDisplay(){
-    // Display inital guesses left, new blanks for current selected word, and clearing wrong guesses
     document.getElementById("word").innerHTML = blanksAndCorrectLettersArray.join(" ");
     document.getElementById("guess-counter").innerHTML = userRemainingGuessCounter;
     document.getElementById("guessed-letters").innerHTML = incorrectGuessedLettersArray.join(" ");
