@@ -8,7 +8,10 @@
   height: 20vh;
   margin-bottom: 1em;
   text-align: center;
-  background-color: rgb(234, 236, 239);
+  background-image: url("Images/Simpsons_family.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .header_title {
   height: 60px;
@@ -71,33 +74,75 @@ p {
     background-position: center;
     background-size: cover;
   }
-  .header_title{
+  .header_title {
     height: 6rem;
   }
-  .header_title h1{
+  .header_title h1 {
     font-size: 5em;
   }
-  .header_title_info h2{
+  .header_title_info h2 {
     font-size: 3em;
   }
 
-  strong{
+  strong {
     font-size: 2em;
   }
-  .scoreCounters{
+  .scoreCounters {
     font-size: 2em;
   }
-  .randomSelectedWordContainer{
+  .randomSelectedWordContainer {
     font-size: 4em;
   }
-  .guessed-letters-container{
+  .guessed-letters-container {
     text-align: center;
     margin: 0 10%;
     font-size: 4em;
   }
 
-  p{
+  p {
     font-size: 2em;
   }
+}
 
+/* Large screens - DESKTOP */
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {
+  .header_container {
+    width: 100%;
+    height: 46vh;
+    margin-bottom: 1em;
+    text-align: center;
+    background-image: url("Images/Simpsons_family.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .header_title {
+    height: 6rem;
+  }
+  .header_title h1 {
+    font-size: 5em;
+  }
+  .header_title_info h2 {
+    font-size: 3em;
+  }
+
+  strong {
+    font-size: 2em;
+  }
+  .scoreCounters {
+    font-size: 2em;
+  }
+  .randomSelectedWordContainer {
+    font-size: 4em;
+  }
+  .guessed-letters-container {
+    text-align: center;
+    margin: 0 10%;
+    font-size: 4em;
+  }
+
+  p {
+    font-size: 2em;
+  }
 }
