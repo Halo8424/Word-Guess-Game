@@ -32,7 +32,7 @@ let blanksPlaceHolderCounter = 0;
 let blanksAndCorrectLettersArray = [];
 let incorrectGuessedLettersArray = [];
 
-// functions that operate the game
+
 function startGame() {
   selectsRandomWord();
   resetGameVariables();
@@ -88,9 +88,6 @@ function checkLetters(userLetterInput) {
   } else {
     incorrectGuessedLettersArray.push(userLetterInput);
     userRemainingGuessCounter--;
-    console.log(
-      `Remaining guesses: ${userRemainingGuessCounter} and incorrectGuessedLettersArray array: [${incorrectGuessedLettersArray}]`
-    );
   }
 }
 
