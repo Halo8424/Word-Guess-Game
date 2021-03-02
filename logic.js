@@ -35,7 +35,13 @@ let incorrectGuessedLettersArray = [];
 
 // functions that operate the game 
 function startGame(){
-    userRemainingGuessCounter = 10;
+    selectsRandomWord();
+    resetGameVariables();
+    setNewBlanks();
+    resetsUserDisplay();
+};
+
+function selectsRandomWord(){
     randomSelectedWord = wordList[Math.floor(Math.random() * wordList.length)];
     console.log(`Word Chosen From Array: ${randomSelectedWord}`);
     // Capture each letter of the randomSelectedWord
@@ -44,18 +50,21 @@ function startGame(){
     // Setting the number of blanks for the selected word
     blanksPlaceHolderCounter = lettersOfRandomSelectedWordsArray.length;
     console.log(`Number of blanks for selected words: ${blanksPlaceHolderCounter}`);
+};
 
-    // Clearing the blanks and correct letters array, and the wrong Guesses Array for a fresh game reset
+function resetGameVariables(){
+    userRemainingGuessCounter = 10;
+     // Clearing the blanks and correct letters array, and the wrong Guesses Array for a fresh game reset
     blanksAndCorrectLettersArray = [];
     incorrectGuessedLettersArray = [];
+};
 
+function setNewBlanks(){
     //Looping over blanksPlaceHolderCounter variable to push blanks to blanksAndCorrectLettersArray array
     for(let i = 0; i < blanksPlaceHolderCounter; i++){
         blanksAndCorrectLettersArray.push("_");
     }
     console.log(blanksAndCorrectLettersArray);
-
-    resetsUserDisplay();
 };
 
 function resetsUserDisplay(){
