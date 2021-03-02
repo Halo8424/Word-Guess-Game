@@ -24,8 +24,8 @@ let wordList = [
     "maggie"
 ];
 
-let wins = 0;
-let losses = 0;
+let winsCounter = 0;
+let lossesCounter = 0;
 let remainingGuesses = 10;
 let selectedWord = "";
 let lettersInSelectedWord =[];
@@ -95,7 +95,7 @@ function checkLetters(letter){
 //  Function to deal with the ending of a round. 
     function endOfRound(){
         // Feed back on the status of the game
-        console.log(`Wins: ${wins} Losses: ${losses} Remaining Guesses: ${remainingGuesses}`);
+        console.log(`Wins: ${winsCounter} Losses: ${lossesCounter} Remaining Guesses: ${remainingGuesses}`);
 
         // Update html on guesses reamining 
         document.getElementById("guess-counter").innerHTML = remainingGuesses;
@@ -107,9 +107,9 @@ function checkLetters(letter){
         // Conditional Checking User Guessed The Word. 
         if(lettersInSelectedWord.toString() === blanksAndCorrectLetters.toString()){
             // update Win counter
-            wins++;
+            winsCounter++;
             // update html win counter. 
-            document.getElementById("wins").innerHTML = wins;
+            document.getElementById("wins").innerHTML = winsCounter;
             //  alert user they won the round
             alert("You Have Won This Round");
 
@@ -119,9 +119,9 @@ function checkLetters(letter){
         }else{
             // Check to see if remaining guess have reach zero
             if(remainingGuesses === 0){
-                // update losses counter and update losses on html 
-                losses++;
-                document.getElementById("loses").innerHTML = losses;
+                // update lossesCounter counter and update lossesCounter on html 
+                lossesCounter++;
+                document.getElementById("loses").innerHTML = lossesCounter;
 
                 // alert the user they lost the round.
                 alert("Sorry You Lost This Round");
