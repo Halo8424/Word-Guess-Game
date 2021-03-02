@@ -60,14 +60,14 @@ function setNewBlanks() {
 }
 
 function resetsUserDisplay() {
-  document.getElementById("word").innerHTML = blanksAndCorrectLettersArray.join(
+  document.getElementById("randomSelectedWordText").innerHTML = blanksAndCorrectLettersArray.join(
     " "
   );
   document.getElementById(
-    "guess-counter"
+    "guessesRemainingCounter"
   ).innerHTML = userRemainingGuessCounter;
   document.getElementById(
-    "guessed-letters"
+    "usersGuessedLetters"
   ).innerHTML = incorrectGuessedLettersArray.join(" ");
 }
 

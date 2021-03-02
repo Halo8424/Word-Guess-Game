@@ -33,7 +33,7 @@ strong {
   font-size: 20px;
 }
 
-.word_container {
+.randomSelectedWordContainer {
   padding: 20px;
   margin-bottom: 1em;
   display: flex;
@@ -52,7 +52,7 @@ strong {
   margin: 5px;
   font-size: 25px;
 }
-#guessed-letters{
+#usersGuessedLetters{
     height: 1em;
 }
 p {
