@@ -55,11 +55,18 @@ function startGame(){
     }
     console.log(blanksAndCorrectLettersArray);
 
+    resetsUserDisplay();
+};
+
+function resetsUserDisplay(){
     // Display inital guesses left, new blanks for current selected word, and clearing wrong guesses
     document.getElementById("word").innerHTML = blanksAndCorrectLettersArray.join(" ");
     document.getElementById("guess-counter").innerHTML = userRemainingGuessCounter;
-    document.getElementById("guessed-letters").innerHTML = wrongGuesses.join(" ");
+    document.getElementById("guessed-letters").innerHTML = incorrectGuessedLettersArray.join(" ");
 };
+
+
+
 // function to check letter in randomSelectedWord
 function checkLetters(letter){
   // initializing a false boolean value to "letterInWord" variable, we'll update if a letter is found in this word. 
@@ -83,11 +90,11 @@ function checkLetters(letter){
       console.log(blanksAndCorrectLettersArray);
   }
     
-    //   If letter does not exsit push letter into wrongGuesses array and update the remaining guesses 
+    //   If letter does not exsit push letter into incorrectGuessedLettersArray array and update the remaining guesses 
     else{
-        wrongGuesses.push(letter);
+        incorrectGuessedLettersArray.push(letter);
         userRemainingGuessCounter--;
-        console.log(`Remaining guesses: ${userRemainingGuessCounter} and wrongGuesses array: [${wrongGuesses}]`);
+        console.log(`Remaining guesses: ${userRemainingGuessCounter} and incorrectGuessedLettersArray array: [${incorrectGuessedLettersArray}]`);
     }
 
 };
@@ -97,13 +104,8 @@ function checkLetters(letter){
         // Feed back on the status of the game
         console.log(`Wins: ${winsCounter} Losses: ${lossesCounter} Remaining Guesses: ${userRemainingGuessCounter}`);
 
-        // Update html on guesses reamining 
-        document.getElementById("guess-counter").innerHTML = userRemainingGuessCounter;
-        // Update html with corrct letters on screen
-        document.getElementById("word").innerHTML = blanksAndCorrectLettersArray.join(" ");
-        // Display the wrong guesses letters to the user.
-        document.getElementById("guessed-letters").innerHTML = wrongGuesses.join(" ");
-
+        resetsUserDisplay();
+        
         // Conditional Checking User Guessed The Word. 
         if(lettersOfRandomSelectedWordsArray.toString() === blanksAndCorrectLettersArray.toString()){
             // update Win counter
