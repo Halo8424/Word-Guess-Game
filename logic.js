@@ -28,10 +28,10 @@ let winsCounter = 0;
 let lossesCounter = 0;
 let userRemainingGuessCounter = 10;
 let randomSelectedWord = "";
-let lettersOfRandomSelectedWords =[];
-let numBlanks = 0;
-let blanksAndCorrectLetters = [];
-let wrongGuesses = [];
+let lettersOfRandomSelectedWordsArray =[];
+let blanksPlaceHolderCounter = 0;
+let blanksAndCorrectLettersArray = [];
+let incorrectGuessedLettersArray = [];
 
 // functions that operate the game 
 function startGame(){
@@ -39,24 +39,24 @@ function startGame(){
     randomSelectedWord = wordList[Math.floor(Math.random() * wordList.length)];
     console.log(`Word Chosen From Array: ${randomSelectedWord}`);
     // Capture each letter of the randomSelectedWord
-    lettersOfRandomSelectedWords = randomSelectedWord.split('');
-    console.log(`Letters of selected word: ${lettersOfRandomSelectedWords}`);
+    lettersOfRandomSelectedWordsArray = randomSelectedWord.split('');
+    console.log(`Letters of selected word: ${lettersOfRandomSelectedWordsArray}`);
     // Setting the number of blanks for the selected word
-    numBlanks = lettersOfRandomSelectedWords.length;
-    console.log(`Number of blanks for selected words: ${numBlanks}`);
+    blanksPlaceHolderCounter = lettersOfRandomSelectedWordsArray.length;
+    console.log(`Number of blanks for selected words: ${blanksPlaceHolderCounter}`);
 
     // Clearing the blanks and correct letters array, and the wrong Guesses Array for a fresh game reset
-    blanksAndCorrectLetters = [];
-    wrongGuesses = [];
+    blanksAndCorrectLettersArray = [];
+    incorrectGuessedLettersArray = [];
 
-    //Looping over numBlanks variable to push blanks to blanksAndCorrectLetters array
-    for(let i = 0; i < numBlanks; i++){
-        blanksAndCorrectLetters.push("_");
+    //Looping over blanksPlaceHolderCounter variable to push blanks to blanksAndCorrectLettersArray array
+    for(let i = 0; i < blanksPlaceHolderCounter; i++){
+        blanksAndCorrectLettersArray.push("_");
     }
-    console.log(blanksAndCorrectLetters);
+    console.log(blanksAndCorrectLettersArray);
 
     // Display inital guesses left, new blanks for current selected word, and clearing wrong guesses
-    document.getElementById("word").innerHTML = blanksAndCorrectLetters.join(" ");
+    document.getElementById("word").innerHTML = blanksAndCorrectLettersArray.join(" ");
     document.getElementById("guess-counter").innerHTML = userRemainingGuessCounter;
     document.getElementById("guessed-letters").innerHTML = wrongGuesses.join(" ");
 };
@@ -67,7 +67,7 @@ function checkLetters(letter){
  
   
   //  Loop over the selected word and check if the letter is anywhere within the selected word. 
-  for(let i = 0; i < numBlanks; i++){
+  for(let i = 0; i < blanksPlaceHolderCounter; i++){
         if(randomSelectedWord[i] === letter){
             // If a letter is found we update the "lettersInword" variable
            letterInWord = true; 
@@ -75,12 +75,12 @@ function checkLetters(letter){
   }
   //  If a letter is within the selected word, Loop over the word again and update the blanks at every instance of that letter.  
   if(letterInWord){
-      for(let j = 0; j < numBlanks; j++){
+      for(let j = 0; j < blanksPlaceHolderCounter; j++){
           if(randomSelectedWord[j] === letter){
-              blanksAndCorrectLetters[j] = letter;
+              blanksAndCorrectLettersArray[j] = letter;
           }
       }
-      console.log(blanksAndCorrectLetters);
+      console.log(blanksAndCorrectLettersArray);
   }
     
     //   If letter does not exsit push letter into wrongGuesses array and update the remaining guesses 
@@ -100,12 +100,12 @@ function checkLetters(letter){
         // Update html on guesses reamining 
         document.getElementById("guess-counter").innerHTML = userRemainingGuessCounter;
         // Update html with corrct letters on screen
-        document.getElementById("word").innerHTML = blanksAndCorrectLetters.join(" ");
+        document.getElementById("word").innerHTML = blanksAndCorrectLettersArray.join(" ");
         // Display the wrong guesses letters to the user.
         document.getElementById("guessed-letters").innerHTML = wrongGuesses.join(" ");
 
         // Conditional Checking User Guessed The Word. 
-        if(lettersOfRandomSelectedWords.toString() === blanksAndCorrectLetters.toString()){
+        if(lettersOfRandomSelectedWordsArray.toString() === blanksAndCorrectLettersArray.toString()){
             // update Win counter
             winsCounter++;
             // update html win counter. 
