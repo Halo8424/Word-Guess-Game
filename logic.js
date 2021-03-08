@@ -113,9 +113,14 @@ function endOfRound() {
   }
 }
 
+function getFocus() {
+  document.getElementById("myTextField").focus();
+  console.log("this method has run!");
+};
+
 // Initial Start Of The Game
 startGame();
-
+getFocus();
 // Then initiate the function for capturing key clicks.
 document.onkeyup = function (event) {
   if (event.keyCode >= 65 && event.keyCode <= 90) {

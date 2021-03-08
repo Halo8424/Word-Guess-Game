@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0;
 }
+/* mobile div conainer hidden*/
+#mobileTextInputKeyboardPopUp{
+  display: none;
+}
 
 .header_container {
   width: 100%;
