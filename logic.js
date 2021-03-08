@@ -1,4 +1,3 @@
-
 // List of Simpson Characters
 let wordList = [
   "homer",
@@ -32,7 +31,6 @@ let blanksPlaceHolderCounter = 0;
 let blanksAndCorrectLettersArray = [];
 let incorrectGuessedLettersArray = [];
 
-
 function startGame() {
   selectsRandomWord();
   resetGameVariables();
@@ -60,9 +58,9 @@ function setNewBlanks() {
 }
 
 function resetsUserDisplay() {
-  document.getElementById("randomSelectedWordText").innerHTML = blanksAndCorrectLettersArray.join(
-    " "
-  );
+  document.getElementById(
+    "randomSelectedWordText"
+  ).innerHTML = blanksAndCorrectLettersArray.join(" ");
   document.getElementById(
     "guessesRemainingCounter"
   ).innerHTML = userRemainingGuessCounter;

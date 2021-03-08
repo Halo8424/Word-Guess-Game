@@ -109,7 +109,8 @@ p {
 @media only screen and (min-width: 64.063em) {
   .header_container {
     width: 100%;
-    height: 46vh;
+    /* height: 46vh; */
+    height: 43vh;
     margin-bottom: 1em;
     text-align: center;
     background-image: url("Images/Simpsons_family.jpg");
